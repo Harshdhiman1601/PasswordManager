@@ -7,14 +7,16 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/Password manager"
+        android:id="@+id/PasswordManagerHead"
         android:layout_width="413dp"
         android:layout_height="66dp"
         android:background="#2196F3"
         android:backgroundTint="#2196F3"
-        android:text="Password Manager"
+        android:gravity="center"
+        android:text="  Password Manager"
+        android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#E4D8D8"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,13 +29,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:srcCompat="@android:drawable/ic_input_add"
-        tools:layout_editor_absoluteX="339dp"
-        tools:layout_editor_absoluteY="659dp" />
+    <ListView
+        android:id="@+id/passwordList"
+        android:layout_width="409dp"
+        android:layout_height="591dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordManagerHead" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
