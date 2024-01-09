@@ -5,6 +5,8 @@ import androidx.room.Room;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
+
 
 import java.util.List;
 
@@ -12,8 +14,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
         AppDatabase db = Room.databaseBuilder(this,
                 AppDatabase.class, "myDatabase").allowMainThreadQueries().build();
         PasswordDao passwordDao = db.passwordDao();
@@ -44,6 +44,30 @@ public class MainActivity extends AppCompatActivity {
             Log.i("Name: ", (newPasswords.get(i)).name);
             Log.i("Password: ", newPasswords.get(i).password);
 
+        }
+
+        // Original array
+        int[] originalArray = {1, 2, 3, 4, 5};
+
+        // Convert array to list
+        List<Integer> newArray = convertArrayToList(originalArray);
+
+        // Display the new list
+        Password password = findViewById(R.id.);
+        Password.setText("New Array: " + newArray);
+    }
+
+    private List<Integer> convertArrayToList(int[] array) {
+        // Method 1: Using a loop
+        List<Integer> newList = new ArrayList<>();
+        for (int value : array) {
+            newList.add(value);
+        }
+
+        // Method 2: Using ArrayList constructor
+        // List<Integer> newList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+
+        return newList;
         }
     }
 }
