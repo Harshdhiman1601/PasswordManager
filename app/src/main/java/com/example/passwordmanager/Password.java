@@ -14,4 +14,7 @@ public class Password {
 
     @ColumnInfo(name = "password")
     public String password;
+
+    public static void setText(String s) {
+    }
 }

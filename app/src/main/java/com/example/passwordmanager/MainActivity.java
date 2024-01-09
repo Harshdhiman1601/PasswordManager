@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         List<Integer> newArray = convertArrayToList(originalArray);
 
         // Display the new list
-        Password password = findViewById(R.id.);
+        TextView textView = findViewById(R.id.PasswordManagerHead);
         Password.setText("New Array: " + newArray);
     }
 
@@ -70,4 +71,3 @@ public class MainActivity extends AppCompatActivity {
         return newList;
         }
     }
-}
