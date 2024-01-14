@@ -13,7 +13,7 @@
         android:background="#2196F3"
         android:backgroundTint="#2196F3"
         android:gravity="center"
-        android:text="Password Manager"
+        android:text="@string/password_manager"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
@@ -24,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextSizeCheck" />
+        tools:ignore="RtlCompat,TextSizeCheck" />
 
     <androidx.constraintlayout.widget.Group
         android:layout_width="wrap_content"
@@ -38,10 +38,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PasswordManagerHead" />
-    
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:passwordlist_columncount="4"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

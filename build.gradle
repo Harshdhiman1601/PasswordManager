@@ -2,3 +2,19 @@
 plugins {
 id 'com.android.application' version '8.2.0' apply false
 }
+dependencies {
+    //noinspection GradlePluginVersion
+    classpath 'com.android.tools.build:gradle:latest_version'
+    // other dependencies...
+}
+final def var = buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.3' // Use the version appropriate for your project
+    }
+}
+
+
