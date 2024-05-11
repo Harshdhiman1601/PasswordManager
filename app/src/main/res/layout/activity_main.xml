@@ -1,42 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/PasswordManagerHead"
-        android:layout_width="413dp"
-        android:layout_height="66dp"
-        android:background="#2196F3"
-        android:backgroundTint="#2196F3"
-        android:gravity="center"
-        android:text="@string/password_manager"
-        android:textAlignment="textStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:id="@+id/passwordManagerHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:background="#033588"
+        android:fontFamily="sans-serif-medium"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="8dp"
+        android:text="Password&#160;Manager"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="RtlCompat,TextSizeCheck" />
-
-    <androidx.constraintlayout.widget.Group
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textSize="24sp" />
 
     <ListView
         android:id="@+id/passwordList"
-        android:layout_width="409dp"
-        android:layout_height="591dp"
-        android:layout_marginStart="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordManagerHead" />
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:height="?android:attr/listPreferredItemHeight">
+    </ListView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:outlineSpotShadowColor="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="#CCCCCC"
+                android:text="Add"
+                android:textColor="#000000"
+                app:cornerRadius="5dip"
+                android:onClick="show_add_dialog"
+                app:strokeColor="#000000"
+                app:strokeWidth="1dp"
+                android:layout_weight="1"
+                android:layout_marginRight="4dp"/>
+
+            <Button
+                android:id="@+id/viewButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="#CCCCCC"
+                android:text="View"
+                android:textColor="#000000"
+                app:cornerRadius="5dip"
+                android:onClick="show_view_dialog"
+                app:strokeColor="#000000"
+                app:strokeWidth="1dp"
+                android:layout_weight="1"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</LinearLayout>

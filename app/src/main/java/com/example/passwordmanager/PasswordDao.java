@@ -8,16 +8,25 @@ import androidx.room.Update;
 
 import java.util.List;
 
+import io.reactivex.Completable;
+import kotlinx.coroutines.CompletableJob;
+
 @Dao
 public interface PasswordDao {
     @Query("SELECT * FROM password")
     List<Password> getAll();
 
+    @Query(value = "SELECT * FROM password WHERE name = :passwordName")
+    Password get(String passwordName);
+
     @Insert
     void insert(Password password);
 
     @Delete
-    void DEL(Password password);
+    void remove(Password password);
+
+    @Query("DELETE FROM password")
+    void removeAll();
 
     @Update
     void Update(Password password);

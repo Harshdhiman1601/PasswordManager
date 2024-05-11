@@ -6,8 +6,8 @@ android {
     namespace 'com.example.passwordmanager'
     compileSdk 34
 
-    gradlePluginVersion 'com.android.application'
-    // other configurations...
+//    gradlePluginVersion 'com.android.application'
+//    // other configurations...
 
 
     defaultConfig {
@@ -29,11 +29,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    repositories {
-        google()
-        mavenCentral()
-        // other repositories...
-    }
+
+//    repositories {
+//        google()
+//        mavenCentral()
+//        maven { url=uri("https://jitpack.io") }
+//    }
+//    repositories {
+////        google()
+////        mavenCentral()
+//        jcenter()
+//        // other repositories...
+//    }
 
 }
 
@@ -49,5 +56,6 @@ dependencies {
     implementation "androidx.room:room-runtime:2.6.1"
     annotationProcessor "androidx.room:room-compiler:2.6.1"
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-    implementation "de.codecrafters.tableview:tableview:2.8.0"
+    implementation "androidx.room:room-rxjava2:2.6.1"
+//    implementation "de.codecrafters.tableview:tableview:2.8.0"
 }
