@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+
+    <solid android:colour="#03D6D2"/>
+    <corners android:radious="500dp"/>
+
+</shape>
